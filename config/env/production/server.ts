@@ -1,5 +1,5 @@
 export default ({ env }) => ({
-  host: env('HOST', '0.0.0.0'),
+  host: env('HOST', '0.0.0.0'),  // IMPORTANTE: debe ser 0.0.0.0
   port: env.int('PORT', 1337),
   url: env('HOST_URL'),
   proxy: true,

@@ -30,11 +30,13 @@ module.exports = [
       enabled: true,
       origin: [
         'http://localhost:3000',
-        'http://localhost:3001',
+        'http://localhost:3001', 
         'http://127.0.0.1:3000',
+        'https://resto-opal.vercel.app',  // ⭐ AÑADIDO: tu Vercel
+        'https://barback-sh14.onrender.com',  // ⭐ AÑADIDO: tu Render
         process.env.FRONTEND_URL,
-      ].filter(Boolean), // Elimina valores undefined
-      credentials: true, // ⭐ IMPORTANTE para cookies/auth
+      ].filter(Boolean),
+      credentials: true,
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
     },
