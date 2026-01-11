@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "item_menus",
+  "info": {
+    "singularName": "item-menu",
+    "pluralName": "item-menus",
+    "displayName": "item-menu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "decription": {
+      "type": "string"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "item_menus"
+    },
+    "section": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::section.section",
+      "inversedBy": "item_menus"
+    }
+  }
+}

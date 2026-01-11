@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "reservation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime"
+    },
+    "people": {
+      "type": "integer"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "status_reservation": {
+      "type": "enumeration",
+      "default": "pending",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ]
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "reservation"
+    },
+    "table": {
+      "type": "enumeration",
+      "enum": [
+        "Mesa 1",
+        "Mesa 2",
+        "Mesa 3",
+        "Mesa 4",
+        "Mesa 5",
+        "Mesa 6",
+        "Mesa 7",
+        "Mesa 8",
+        "Mesa 9",
+        "Mesa 10",
+        "Mesa 11",
+        "Mesa 12",
+        "Mesa 13",
+        "Mesa 14",
+        "Mesa 15"
+      ]
+    }
+  }
+}

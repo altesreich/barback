@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sections",
+  "info": {
+    "singularName": "section",
+    "pluralName": "sections",
+    "displayName": "section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "item_menus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::item-menu.item-menu",
+      "mappedBy": "section"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item_menus": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::item-menu.item-menu",
+      "inversedBy": "orders"
+    },
+    "amount": {
+      "type": "json"
+    },
+    "coment": {
+      "type": "text"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "order_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "paid",
+        "sent"
+      ]
+    },
+    "table": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Mesa 1",
+        "Mesa 2",
+        "Mesa 3",
+        "Mesa 4",
+        "Mesa 5",
+        "Mesa 6",
+        "Mesa 7",
+        "Mesa 8",
+        "Mesa 9",
+        "Mesa 10",
+        "Mesa 11",
+        "Mesa 12",
+        "Mesa 13",
+        "Mesa 14",
+        "Mesa 15"
+      ]
+    }
+  }
+}
